@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minion :: 당신의 작은 취미를 ON하다.</title>
+    <link rel="stylesheet" href="master.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!--슬라이드 버튼 시작-->
+    <header>
+        <nav>
+          <div class="menu">
+            <ul>
+              <li><a onclick="fnMove('1')" class="focus-in-expand">Main</a></li>
+              <li><a onclick="fnMove('2')" class="focus-in-expand">Overview</a></li>
+              <li><a onclick="fnMove('3')" class="focus-in-expand">Concept</a></li>
+              <li><a onclick="fnMove('4')" class="focus-in-expand">Brand<br>Essence</a></li>
+              <li><a onclick="fnMove('5')" class="focus-in-expand">Identity</a></li>
+              <li><a onclick="fnMove('6')" class="focus-in-expand">Prototype</a></li>
+              <li><a onclick="fnMove('7')" class="focus-in-expand">Motion<br>Graphic</a></li>
+
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--슬라이드 버튼 종료-->
+
+    <div class="box box1" id="anchor1">
+        <div class="wrap">
+            <img src="img/c_01.png" alt="화면 시뮬레이션" data-aos="zoom-in">
+        </div>
+    </div>
+    <div class="box box2" id="anchor2">
+        <div class="wrap">
+            <img src="img/c_02.png" alt="브랜드 설명" data-aos="fade-up"
+            data-aos-duration="3000">
+        </div>
+    </div>
+    <div class="box box3" id="anchor3">
+        <div class="wrap">
+            <div class="b3_c1">
+                <img src="img/c_03_01.png" alt="타이틀">
+            </div>
+            <div class="b3_c2">
+                <img src="img/c_03_02.png" alt="이미지1" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
+                <img src="img/c_03_03.png" alt="이미지2" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
+                <img src="img/c_03_04.png" alt="이미지3" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
+            </div>
+            <div class="b3_c3">
+                <img src="img/c_03_05.png" alt="컨셉 설명" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
+            </div>
+        </div>
+    </div>
+    <div class="box box4" id="anchor4">
+        <div class="wrap">
+            <img src="img/c_04.png" alt="브랜드 에센스" data-aos="flip-left">
+        </div>
+    </div>
+    <div class="box box5" id="anchor5">
+        <div class="wrap">
+            <div class="b5_c1">
+                <img src="img/c_05.png" alt="BI 타이틀" data-aos="zoom-in">
+            </div>
+            <div class="b5_c2">
+                <img src="img/c_06.png" alt="BI 설명" data-aos="fade-up"
+                data-aos-duration="3000">
+            </div>
+        </div>
+    </div>
+    <div class="box box6" id="anchor6">
+        <div class="wrap">
+            <img src="img/c_07.png" alt="목업" data-aos="fade-up">
+        </div>
+    </div>
+    <div class="box box7" id="anchor7">
+        <video autoplay loop muted class="video01">
+            <source src="img/mov.mp4" type="video/mp4">
+        </video>
+    </div>
+    <footer>
+        <br>
+        <br>
+        Design by Minheewon. All rights reserved.<br>
+        minion156@naver.com
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+          <!--특정위치로 이동 시작-->
+    <script type="text/javascript" src="anchor_jquery.js"></script>
+    <script>
+      function fnMove(seq){
+          var offset = $("#anchor" + seq).offset();
+          $('html, body').animate({scrollTop : offset.top},1000);
+      }
+    </script>
+    <!--특정위치로 이동 끝-->
+</body>
+</html>
